@@ -12,6 +12,25 @@ a{
     text-decoration: none;
 }
 
+label{
+    display: inline-block;
+    width: 180px;
+}
+
+input[type='text']{
+    width: 97%;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px #000 solid;
+}
+
+input[type='number']{
+    width: 50px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px #000 solid;
+}
+
 .container{
     width: 60%;
     margin: 0px auto;
@@ -47,3 +66,10 @@ a.start{
     border: #ccc dotted 1px;
     margin: 20px 0 10px 0;
 }
+
+@media only screen and (max-width:960px){
+    .container{
+        width: 80%;
+    }
+}
+

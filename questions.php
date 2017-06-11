@@ -1,3 +1,24 @@
+<?php include 'database.php';?>
+<?php
+//Set Question Number
+//$number = (int) $_GET['n'];
+
+//Get Question - puts it into a variable - not run yet
+$query = "SELECT * FROM 'questions'";
+//WHERE question_number = $number";
+
+
+//Get results
+$result = mysqli_query($conn, $query);
+//$question=mysqli_fetch_assoc($result);
+
+   
+
+
+
+//$question = $result->mysqli_fetch_assoc();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +38,7 @@
         <div class="container">
             <div class="current">Question 1 of 5</div>
             <p class="question">
-                What does PHP stand for?
+                <?php echo $question['text']; ?>
             </p>
             <form method="post" action="process.php">
                 <ul class="choices">
